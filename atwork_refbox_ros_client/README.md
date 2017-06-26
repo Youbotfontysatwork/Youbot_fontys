@@ -1,4 +1,4 @@
 
 The implementation made of the referee box communication is set of 3 nodes written in cpp and a launch file connected to the robot_example_ros node, the one from the referee box client, in the following structure pictured in the rqt graph.
-
+![alt text](https://github.com/Youbotfontysatwork/youbot_fontys/blob/master/atwork_refbox_ros_client/rqt.png)
 The three nodes are the logging_node, a publisher sending a boolean to the robot_example_ros node transmitting to the referee box that the robot is in fact logging to send the tasks. The inventory_sender is subscribed to the robot_example_node to get the competition messages data of the items to be picked and publishes them as string data. Finally the task_sender is also subscribed to the to the robot_example_ros to get the data of the locations the robot has to go. From the ros parameters in transforms the positions in geometry pose data to publish it.
