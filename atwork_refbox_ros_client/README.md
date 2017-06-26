@@ -1,8 +1,8 @@
 # Refere box client
 
+The Referee box client package is a github that provides a kind of starting kit or toolbox to create a system interacting with the referee box and the robot. The github can be cloned in the source directory: https://github.com/industrial-robotics/atwork_refbox_ros_client. The packages provides a 2 nodes: a cpp script that gets the protocol buffers of the referee box on the server and translates to ros messages and publishes then in several topics. The second node a cpp script with one function, sending the beacon signal of the robot.
 
-
-The implementation made of the referee box communication is set of 3 nodes written in cpp and a launch file connected to the robot_example_ros node, the one from the referee box client, in the following structure pictured in the rqt graph.
+The implementation made on the referee box communication is set of 3 nodes written in cpp and a launch file connected to the robot_example_ros node, the one from the referee box client, in the following structure pictured in the rqt graph.
 ![alt text](https://github.com/Youbotfontysatwork/youbot_fontys/blob/master/atwork_refbox_ros_client/rqt.png)
 The three nodes are the logging_node, a publisher sending a boolean to the robot_example_ros node transmitting to the referee box that the robot is in fact logging to send the tasks. The inventory_sender is subscribed to the robot_example_node to get the competition messages data of the items to be picked and publishes them as string data. Finally the task_sender is also subscribed to the to the robot_example_ros to get the data of the locations the robot has to go. From the ros parameters in transforms the positions in geometry pose data to publish it.
 
