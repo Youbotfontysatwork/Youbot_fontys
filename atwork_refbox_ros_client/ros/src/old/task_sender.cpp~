@@ -1,0 +1,99 @@
+#include <ros/ros.h>
+#include <atwork_ros_msgs/TaskInfo.h>
+#include <iostream>
+#include <vector>
+//#include <geometry_msgs/PoseStamped.h>
+#include <geometry_msgs/Pose.h>
+#include <geometry_msgs/PoseArray.h>
+
+
+//std::vector<geometry_msgs::PoseStamped> location_goals;
+std::vector<geometry_msgs::Pose> location_goals;
+geometry_msgs::PoseArray pose_array;
+ros::Publisher poses_queue;
+bool is_found = false;
+
+void taskInfoCallback(const atwork_ros_msgs::TaskInfo &task){
+  
+  std::cout << "location type " << task.tasks[0].transportation_task.source.type.data << " Description " << task.tasks[0].transportation_task.source.description.data <<std::endl;
+  geometry_msgs::Pose goal_pose;
+  for(size_t i=0; i<task.tasks.size(); i++){
+    if(task.tasks[i].transportation_task.source.type.data == 2){
+      
+      switch (task.tasks[i].transportation_task.source.instance_id.data){
+        case 2:
+          goal_pose.position.x = 1.039;//-1.847;
+          goal_pose.position.y = -0.0212;//-10.328;
+          goal_pose.orientation.z = 0.716456;
+          goal_pose.orientation.w = 0.6976;
+          is_found = true;
+          break;
+        case 3:
+          goal_pose.position.x = 0.8368;//-1.672;
+          goal_pose.position.y = 0.905;//-11.666;
+          goal_pose.orientation.z = -0.093;
+          goal_pose.orientation.w = 1.0;
+          is_found = true;
+          break;
+        case 5:
+          goal_pose.position.x = 1.039;//-1.847;
+          goal_pose.position.y = -0.0212;//-10.328;
+          goal_pose.orientation.z = 0.716456;
+          goal_pose.orientation.w = 0.6976;
+          is_found = true;
+          break;
+          //goal_pose.position.x = ; // -1.429;
+          //goal_pose.position.y = ;//-14.334;
+          //goal_pose.orientation.w = ;//1.0;
+          //is_found = true;
+          //break;
+        case 6:
+          goal_pose.position.x = 0.8368;//-1.672;
+          goal_pose.position.y = 0.905;//-11.666;
+          goal_pose.orientation.z = -0.093;
+          goal_pose.orientation.w = 1.0;
+          
+          //goal_pose.position.x = ;//-2.787;
+          //goal_pose.position.y = ;//-14.511;
+          //goal_pose.orientation.w = ;//1.0;
+          is_found = true;
+          break;
+        default:
+          is_found = false;
+          break;
+          // code to be executed if n doesn't match any constant
+      }
+      
+      //move_base_msgs::MoveBaseGoal goal;
+      //geometry_msgs::PoseStamped goal_pose;
+      
+      if(is_found == true){
+        location_goals.push_back(goal_pose);
+        is_found = false;
+      }
+    
+    }
+  }
+  goal_pose.position.x = 0.8368;
+  goal_pose.position.y = 0.905;
+  goal_pose.orientation.z = 0.716456;
+  goal_pose.orientation.w = 0.6976;
+  location_goals.push_back(goal_pose);
+  pose_array.poses = location_goals;
+  poses_queue.publish(pose_array);
+}
+
+
+
+int main(int argc, char **argv)
+{
+  ros::init(argc, argv, "task_sender");
+  ros::NodeHandle nh;
+  ROS_INFO("CFH Robot example is running");
+  
+  ros::Subscriber logging_status_sub_ = nh.subscribe("/robot_example_ros/task_info", 1000, taskInfoCallback);
+  poses_queue = nh.advertise<geometry_msgs::PoseArray>("/goal_queue_goals", 1000);
+  ros::spin();
+
+  return 0;
+}
