@@ -1,5 +1,7 @@
 # Refere box client
 
+In the atwork_refbox_ros_client directory the launch file is in the subdirectory of atwork_refbox_ros_client/ros/launch and the different nodes are in the subdirectory atwork_refbox_ros_client/ros/src.
+
 The Referee box client package is a github that provides a kind of starting kit or toolbox to create a system interacting with the referee box and the robot. The referee box is an application developped specifically by the competition organisation to send the tasks of the robots taking part in the competition. This application can be cloned from the github: https://github.com/industrial-robotics/atwork_central_factory_hub. The referee box allows communication between operators connected to the same network. The type of communication that it uses are the protocol buffers, which are the Google platform and language independent mechanism for serializing structured data. The github of the referee box client can be cloned in the source directory: https://github.com/industrial-robotics/atwork_refbox_ros_client. The packages provides a 2 nodes: a cpp script that gets the protocol buffers of the referee box on the server and translates to ros messages and publishes then in several topics. The second node a cpp script with one function, sending the beacon signal of the robot.
 
 The implementation made on the referee box communication is set of 3 nodes written in cpp and a launch file connected to the robot_example_ros node, the one from the referee box client, in the following structure pictured in the rqt graph.
