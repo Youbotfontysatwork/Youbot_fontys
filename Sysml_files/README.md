@@ -24,7 +24,7 @@
 ### Manipulator IBD
 ![alt text](https://github.com/Youbotfontysatwork/youbot_fontys/blob/master/Sysml_files/bdd17.png)
 ## Gripper
-### Gripper BDD
+#### Gripper BDD
 ![alt text](https://github.com/Youbotfontysatwork/youbot_fontys/blob/master/Sysml_files/bdd18.png)
 ### Gripper IBD
 ![alt text](https://github.com/Youbotfontysatwork/youbot_fontys/blob/master/Sysml_files/bdd19.png)
