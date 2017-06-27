@@ -1,10 +1,13 @@
 # SysML of the youbot fontys@work system
-
+The system of fontys@work youbot was modelled following the SysML guidelines to help the understanding of the interconnections of all the modules that make up the robot. Therefore Block Definition Diagrams and Internal Block Diagrams were made at different levels of abstraction. Moreover the environment of the robot is also taken into account in the model with the use case diagrams as well as the context diagram that place the youbot within the competition.
 
 ## Use Case Diagram
+The first Use Case Diagram shows the interaction between the referee of the competition and the youbot.
 ![alt text](https://github.com/Youbotfontysatwork/youbot_fontys/blob/master/Sysml_files/use%20case1.png)
+The second Use Case Diagram focuses on the youbot, the programmer and the end goals.
 ![alt text](https://github.com/Youbotfontysatwork/youbot_fontys/blob/master/Sysml_files/use%20case%202.png)
 ## Context Diagram
+This Con
 ![alt text](https://github.com/Youbotfontysatwork/youbot_fontys/blob/master/Sysml_files/context.png)
 ## Youbot System
 ### Youbot BDD
