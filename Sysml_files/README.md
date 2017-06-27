@@ -7,7 +7,7 @@ The first Use Case Diagram shows the interaction between the referee of the comp
 The second Use Case Diagram focuses on the youbot, the programmer and the end goals.
 ![alt text](https://github.com/Youbotfontysatwork/youbot_fontys/blob/master/Sysml_files/use%20case%202.png)
 ## Context Diagram
-This Con
+This Context diagram sets the youbot within the @Work competition.
 ![alt text](https://github.com/Youbotfontysatwork/youbot_fontys/blob/master/Sysml_files/context.png)
 ## Youbot System
 ### Youbot BDD
