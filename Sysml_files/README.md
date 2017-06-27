@@ -38,9 +38,15 @@ The Manipulator is the name of the code made to control the arm
 ### Vision IBD
 ![alt text](https://github.com/Youbotfontysatwork/youbot_fontys/blob/master/Sysml_files/bdd21.png)
 ## Referee box client
+### Referee box BDD
 ![alt text](https://github.com/Youbotfontysatwork/youbot_fontys/blob/master/Sysml_files/bdd7.png)
+### Referee box IBD
 ![alt text](https://github.com/Youbotfontysatwork/youbot_fontys/blob/master/Sysml_files/bdd8.png)
+### Beacon signal sender IBD
 ![alt text](https://github.com/Youbotfontysatwork/youbot_fontys/blob/master/Sysml_files/bdd9.png)
+### Protobuff to ROS translation IBD
 ![alt text](https://github.com/Youbotfontysatwork/youbot_fontys/blob/master/Sysml_files/bdd10.png)
+### Task forwarding IBD
 ![alt text](https://github.com/Youbotfontysatwork/youbot_fontys/blob/master/Sysml_files/bdd11.png)
+### Robot Logger IBD
 ![alt text](https://github.com/Youbotfontysatwork/youbot_fontys/blob/master/Sysml_files/bdd12.png)
