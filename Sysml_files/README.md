@@ -23,6 +23,7 @@ This Context diagram sets the youbot within the @Work competition.
 ### Arm IBD
 ![alt text](https://github.com/Youbotfontysatwork/youbot_fontys/blob/master/Sysml_files/bdd15.png)
 ### Manipulator BDD
+The Manipulator is the name of the code made to control the arm
 ![alt text](https://github.com/Youbotfontysatwork/youbot_fontys/blob/master/Sysml_files/bdd16.png)
 ### Manipulator IBD
 ![alt text](https://github.com/Youbotfontysatwork/youbot_fontys/blob/master/Sysml_files/bdd17.png)
